@@ -2,6 +2,8 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 import { Colors } from '@/constants/Colors';
+import { Octicons } from '@expo/vector-icons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function TabLayout() {
   return (
@@ -21,14 +23,14 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          // tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />
+          tabBarIcon: ({ color: _ }) => <Octicons size={22} name="home" color="black" />
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="addmood"
         options={{
-          title: 'Explore',
-          // tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Add Mood',
+          tabBarIcon: ({ color: _ }) => <MaterialIcons name="add" size={24} color="black" />
         }}
       />
     </Tabs>

@@ -24,7 +24,7 @@ export default function HomeScreen() {
 
       {/* Header */}
       <View style={styles.headerContainer}>
-        <Text>Today - {formattedDate}</Text>
+        <Text style={styles.headerDate}>Today - {formattedDate}</Text>
       </View>
 
       {/* Greeting */}
@@ -51,11 +51,18 @@ const styles = StyleSheet.create({
   homeContainer: {
     flex: 1,
     paddingHorizontal: 15,
-    paddingTop: 10
+    paddingTop: 10,
+    flexDirection: 'column',
   },
   headerContainer: {
-    flex: 0.1,
-    justifyContent: 'center',
+    marginBottom: 10,
+    display: 'flex',
+    justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  headerDate: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
 });
